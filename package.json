@@ -8,10 +8,6 @@
     "url": "https://github.com/MatteoGabriele/create-npm-package/issues"
   },
   "repository": "MatteoGabriele/create-npm-package",
-  "files": [
-    "index.js",
-    "create-npm-package.js"
-  ],
   "bin": {
     "create-npm-package": "./index.js"
   },
