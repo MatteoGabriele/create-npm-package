@@ -6,6 +6,10 @@
     "url": ""
   },
   "repository": "",
+  "scripts": {
+    "start": "node ./config/scripts/start.js",
+    "build": "node ./config/scripts/build.js"
+  },
   "main": "src/index.js",
   "license": "MIT",
   "files": [
