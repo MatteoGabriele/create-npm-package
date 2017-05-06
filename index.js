@@ -12,4 +12,4 @@ if (currentNodeVersion.split('.')[0] < 6) {
   process.exit(1);
 }
 
-require('./create-npm-package')
+require('./src/create-npm-package')
