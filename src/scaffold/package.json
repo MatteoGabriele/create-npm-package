@@ -10,7 +10,7 @@
     "dev": "node ./config/scripts/dev.js",
     "build": "node ./config/scripts/build.js"
   },
-  "main": "src/index.js",
+  "main": "./dist/<%= name %>.js",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.1",

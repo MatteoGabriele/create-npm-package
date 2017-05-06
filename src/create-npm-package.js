@@ -54,6 +54,16 @@ const tasks = new Listr([
         name: name,
         author: ctx.gitUser
       }
+    }).then(() => {
+      const filePath = `${dest}/package.json`
+      const file = fs.readFileSync(filePath, 'utf8')
+      const scaffoldPackageJSON = JSON.parse(file)
+
+      // files property needs to be added programmatically or all scaffold folder
+      // will be ignored during create-npm-package publish
+      scaffoldPackageJSON.files = ['dist']
+
+      fs.writeFileSync(filePath, JSON.stringify(scaffoldPackageJSON, null, 2))
     })
   },
   {
@@ -84,7 +94,7 @@ const tasks = new Listr([
 
 tasks.run()
   .then(response => {
-    const cmdStart = useYarn ? 'yarn start' : 'npm run start'
+    const cmdStart = useYarn ? 'yarn dev' : 'npm run dev'
     const cmdBuild = useYarn ? 'yarn build' : 'npm run build'
 
     console.log(`
