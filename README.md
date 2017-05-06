@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="http://i.imgur.com/MccTEC1.png" width="250">
+  <br>  <br>
+  <a href="https://www.npmjs.org/package/create-npm-package"><img src="https://badge.fury.io/js/create-npm-package.svg"></a> <a href="https://www.npmjs.com/package/vcreate-npm-package"><img src="https://img.shields.io/npm/dm/create-npm-package.svg"></a>
+</p>
+
 # create-npm-package
 
 Creates an npm package boilerplate that you don't have to write again.
