@@ -7,7 +7,7 @@
   },
   "repository": "",
   "scripts": {
-    "start": "node ./config/scripts/start.js",
+    "dev": "node ./config/scripts/dev.js",
     "build": "node ./config/scripts/build.js"
   },
   "main": "src/index.js",
