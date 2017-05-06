@@ -25,7 +25,7 @@ const gitignore = 'dist/\n' +
 'yarn-error.log\n'
 
 const dest = path.resolve(process.cwd(), name)
-const template = path.resolve(__dirname, '../template')
+const template = path.resolve(__dirname, './template')
 
 const tasks = new Listr([
   {

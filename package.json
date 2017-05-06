@@ -8,14 +8,7 @@
     "url": "https://github.com/MatteoGabriele/create-npm-package/issues"
   },
   "files": [
-    "template/config/scripts/build.js",
-    "template/config/scripts/start.js",
-    "template/config/base.config.js",
-    "template/src/index.js",
-    "template/src/package.json",
-    "template/src/README.md",
-    "src/create-npm-package.js",
-    "src/utils.js",
+    "src",
     "index.js"
   ],
   "repository": "MatteoGabriele/create-npm-package",
