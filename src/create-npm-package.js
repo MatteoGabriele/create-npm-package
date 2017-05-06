@@ -84,11 +84,19 @@ const tasks = new Listr([
 
 tasks.run()
   .then(response => {
+    const cmdStart = useYarn ? 'yarn start' : 'npm run start'
+    const cmdBuild = useYarn ? 'yarn build' : 'npm run build'
+
     console.log(`
     Npm package as been created successfully!
 
     Start coding:
-      cd ${name} && npm run dev
+      cd ${name} && ${cmdStart}
+
+    Build your package
+      cd ${name} && ${cmdBuild}
+
+    Remember to fill all missing fields in your package.json!
     `)
   })
   .catch(() => {})
