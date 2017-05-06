@@ -7,6 +7,11 @@
   "bugs": {
     "url": "https://github.com/MatteoGabriele/create-npm-package/issues"
   },
+  "files": [
+    "template",
+    "src",
+    "index.js"
+  ],
   "repository": "MatteoGabriele/create-npm-package",
   "bin": {
     "create-npm-package": "./index.js"
