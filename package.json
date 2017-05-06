@@ -4,7 +4,21 @@
   "description": "Creates an npm package boilerplate that you don't have to write again.",
   "author": "Matteo Gabriele <m.gabriele.dev@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatteoGabriele/create-npm-package/issues"
+  },
+  "repository": "MatteoGabriele/create-npm-package",
+  "files": [
+    "index.js",
+    "create-npm-package.js"
+  ],
   "bin": {
-    "create-npm-package": "./bin/create-npm-package"
+    "create-npm-package": "./index.js"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "execa": "^0.6.3",
+    "kopy": "^7.0.0",
+    "listr": "^0.12.0"
   }
 }

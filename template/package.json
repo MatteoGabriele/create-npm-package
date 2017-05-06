@@ -1,7 +1,7 @@
 {
-  "name": "{{ name }}",
-  "description": "{{ description }}",
-  "author": "{{ author.name }} <{{ author.email }}>",
+  "name": "<%= name %>",
+  "description": "",
+  "author": "<%= author.name %> <<%= author.email %>>",
   "main": "src/index.js",
   "license": "MIT",
   "files": [
