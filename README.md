@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/create-npm-package.svg)](https://badge.fury.io/js/create-npm-package) [![npm](https://img.shields.io/npm/dm/create-npm-package.svg)](https://www.npmjs.com/package/create-npm-package)
+[![npm version](https://badge.fury.io/js/create-npm-package.svg)](https://badge.fury.io/js/create-npm-package) 
 
 # create-npm-package
 
