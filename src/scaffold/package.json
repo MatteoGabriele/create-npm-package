@@ -12,9 +12,6 @@
   },
   "main": "src/index.js",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
