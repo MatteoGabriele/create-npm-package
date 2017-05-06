@@ -18,7 +18,12 @@ if (!name) {
   process.exit(1)
 }
 
-const gitignore = path.resolve(__dirname, '../.gitignore')
+const gitignore = 'dist/\n' +
+'node_modules/\n' +
+'.DS_Store\n' +
+'npm-debug.log\n' +
+'yarn-error.log\n'
+
 const dest = path.resolve(process.cwd(), name)
 const template = path.resolve(__dirname, '../template')
 
@@ -71,8 +76,7 @@ const tasks = new Listr([
     title: 'Initialize git',
     skip: () => skipGitInit,
     task: () => {
-      const gitignoreContent = fs.readFileSync(gitignore, 'utf8')
-      fs.writeFileSync(`${dest}/.gitignore`, gitignoreContent)
+      fs.writeFileSync(`${dest}/.gitignore`, gitignore)
       return execa('git', ['init'])
     }
   }
