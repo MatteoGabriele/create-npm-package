@@ -21,7 +21,7 @@ $ create-npm-package my-package
 
 ### Skip the npm name check
 
-The existance of the package name is checked automatically, but it's possible to skip this task
+The existance of the package name is checked automatically, but you can skip it!
 
 ```bash
 $ create-npm-package my-package --skip-check
@@ -29,7 +29,7 @@ $ create-npm-package my-package --skip-check
 
 ### Skip git initialization 
 
-Git is initialized on package creation, but it's possible to skip this task
+Git is initialized on package creation, but you can skip it!
 
 ```bash
 $ create-npm-package my-package --skip-git
