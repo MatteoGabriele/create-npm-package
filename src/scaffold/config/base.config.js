@@ -7,7 +7,11 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `${pkg.name}.js`
+    filename: `${pkg.name}.js`,
+    libraryTarget: 'umd'
+  },
+  resolve: {
+    extensions: ['.js']
   },
   module: {
     rules: [
