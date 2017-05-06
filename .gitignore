@@ -1,0 +1,9 @@
+dist/
+node_modules/
+.DS_Store
+*.tgz
+npm-debug.log
+.tern-project
+etc/
+yarn-error.log
+coverage/
