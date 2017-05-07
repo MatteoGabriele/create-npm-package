@@ -4,6 +4,9 @@
 
 Creates an npm package boilerplate that you don't have to write again.
 
+![alt tag](https://raw.githubusercontent.com/MatteoGabriele/create-npm-package/master/example.gif)
+
+
 ## Install
 
 ```bash
