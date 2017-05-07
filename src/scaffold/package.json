@@ -1,6 +1,7 @@
 {
   "name": "<%= name %>",
   "author": "<%= author.name %> <<%= author.email %>>",
+  "version": "0.0.0",
   "description": "",
   "bugs": {
     "url": ""
