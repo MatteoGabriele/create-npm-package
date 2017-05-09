@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "description": "",
   "bugs": {
-    "url": "<%= author.url %>/<%= name %>/issues"
+    "url": "<%= issuesUrl %>"
   },
-  "repository": "<%= author.url %>/<%= name %>/issues",
+  "repository": "<%= repositoryUrl %>",
   "scripts": {
     "dev": "node ./config/scripts/dev.js",
     "build": "node ./config/scripts/build.js"

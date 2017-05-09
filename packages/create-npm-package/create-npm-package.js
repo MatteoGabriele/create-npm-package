@@ -61,6 +61,7 @@ const tasks = new Listr([
 
           name = configName.stdout
           email = configEmail.stdout
+          url = configUrl.stdout
         } catch (error) {}
 
         return { name, email, url }
@@ -81,7 +82,9 @@ const tasks = new Listr([
     task: ctx => kopy(`${ctx.templatePath}/src`, dest, {
       data: {
         name: name,
-        author: ctx.gitUser
+        author: ctx.gitUser,
+        issuesUrl: ctx.gitUser.url !== '' ? `${ctx.gitUser.url}/${name}/issues` : ''
+        repositoryUrl: ctx.gitUser.url !== '' ? `${ctx.gitUser.url}/${name}` : ''
       }
     }).then(() => {
       const filePath = `${dest}/package.json`
