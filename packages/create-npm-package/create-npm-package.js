@@ -83,7 +83,7 @@ const tasks = new Listr([
       data: {
         name: name,
         author: ctx.gitUser,
-        issuesUrl: ctx.gitUser.url !== '' ? `${ctx.gitUser.url}/${name}/issues` : ''
+        issuesUrl: ctx.gitUser.url !== '' ? `${ctx.gitUser.url}/${name}/issues` : '',
         repositoryUrl: ctx.gitUser.url !== '' ? `${ctx.gitUser.url}/${name}` : ''
       }
     }).then(() => {
@@ -137,8 +137,6 @@ tasks.run()
 
     Build your package
       cd ${name} && ${cmdBuild}
-
-    Remember to fill all missing fields in your package.json!
     `)
   })
   .catch(() => {})

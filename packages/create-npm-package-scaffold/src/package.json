@@ -9,7 +9,10 @@
   "repository": "<%= repositoryUrl %>",
   "scripts": {
     "dev": "node ./config/scripts/dev.js",
-    "build": "node ./config/scripts/build.js"
+    "build": "node ./config/scripts/build.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublish": "jest && node ./config/scripts/build.js"
   },
   "main": "./dist/<%= name %>.js",
   "license": "MIT",
@@ -21,7 +24,8 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "ora": "^1.2.0",
     "webpack": "^2.5.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "jest": "^20.0.0"
   },
   "dependencies": {}
 }
