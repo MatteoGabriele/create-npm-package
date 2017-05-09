@@ -11,8 +11,7 @@
     "dev": "node ./config/scripts/dev.js",
     "build": "node ./config/scripts/build.js",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "prepublish": "jest && node ./config/scripts/build.js"
+    "test:watch": "jest --watch"
   },
   "main": "./dist/<%= name %>.js",
   "license": "MIT",
