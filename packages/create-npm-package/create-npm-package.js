@@ -6,12 +6,15 @@ const path = require('path')
 const Listr = require('listr')
 const execa = require('execa')
 const fetch = require('node-fetch')
+const extractPackage = require('extract-package')
 const utils = require('./utils')
 
-const name = process.argv[2]
-const useYarn = utils.hasOption('yarn')
-const skipPackageCheck = utils.hasOption('skip-check')
-const skipGitInit = utils.hasOption('skip-git')
+const argv = require('minimist')(process.argv.slice(2))
+
+const name = argv._[0]
+const useYarn = argv.yarn
+const skipPackageCheck = argv['skip-check']
+const skipGitInit = argv['skip-git']
 
 if (!name) {
   console.log('Please specify name of the package')
@@ -25,7 +28,6 @@ const gitignore = 'dist/\n' +
 'yarn-error.log\n'
 
 const dest = path.resolve(process.cwd(), name)
-const template = path.resolve(__dirname, './scaffold')
 
 const tasks = new Listr([
   {
@@ -48,8 +50,14 @@ const tasks = new Listr([
     task: ctx => utils.getGloablUserGit().then(response => ctx.gitUser = response)
   },
   {
+    title: 'Download scaffold',
+    task: ctx => extractPackage({
+      name: 'create-npm-package-scaffold',
+    }).then(templatePath => ctx.templatePath = templatePath)
+  },
+  {
     title: 'Drop package scaffold',
-    task: ctx => kopy(template, dest, {
+    task: ctx => kopy(`${ctx.templatePath}/src`, dest, {
       data: {
         name: name,
         author: ctx.gitUser

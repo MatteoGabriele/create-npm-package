@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "description": "",
   "bugs": {
-    "url": ""
+    "url": "<%= author.url %>/<%= mame %>/issues"
   },
-  "repository": "",
+  "repository": "<%= author.url %>/<%= mame %>/issues",
   "scripts": {
     "dev": "node ./config/scripts/dev.js",
     "build": "node ./config/scripts/build.js"
