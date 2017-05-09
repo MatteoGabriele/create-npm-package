@@ -14,6 +14,12 @@ const name = argv._[0]
 const useYarn = argv.yarn
 const skipPackageCheck = argv['skip-check']
 const skipGitInit = argv['skip-git']
+const version = argv['version']
+
+if (version) {
+  console.log('v' + require('./package.json').version)
+  process.exit(0)
+}
 
 if (!name) {
   console.log('Please specify name of the package')
@@ -67,6 +73,7 @@ const tasks = new Listr([
     title: 'Download scaffold',
     task: ctx => extractPackage({
       name: 'create-npm-package-scaffold',
+      tag: 'beta'
     }).then(templatePath => ctx.templatePath = templatePath)
   },
   {
