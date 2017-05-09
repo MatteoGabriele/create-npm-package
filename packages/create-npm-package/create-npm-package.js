@@ -22,7 +22,7 @@ if (version) {
 }
 
 if (!name) {
-  console.log('Please specify name of the package')
+  console.log('[create-npm-package] Please specify name of the package')
   process.exit(1)
 }
 
@@ -138,4 +138,8 @@ tasks.run()
       cd ${name} && ${cmdBuild}
     `)
   })
-  .catch(() => {})
+  .catch((error) => {
+    console.error('[create-npm-package] I don\'t now man! something really bad happened! :D')
+    console.log('')
+    console.log(error)
+  })
