@@ -6,9 +6,8 @@ const path = require('path')
 const Listr = require('listr')
 const execa = require('execa')
 const fetch = require('node-fetch')
+const co = require('co')
 const extractPackage = require('extract-package')
-const utils = require('./utils')
-
 const argv = require('minimist')(process.argv.slice(2))
 
 const name = argv._[0]
@@ -47,7 +46,22 @@ const tasks = new Listr([
   },
   {
     title: 'Get git global user information',
-    task: ctx => utils.getGloablUserGit().then(response => ctx.gitUser = response)
+    task: ctx => {
+      const getGloablUserGit = co.wrap(function * (name = '', email = '', url = '') {
+        try {
+          const configName = yield execa.shell('git config user.name')
+          const configEmail = yield execa.shell('git config user.email')
+          const configUrl = yield execa.shell('git config user.url')
+
+          name = configName.stdout
+          email = configEmail.stdout
+        } catch (error) {}
+
+        return { name, email, url }
+      })
+
+      return getGloablUserGit().then(user => ctx.gitUser = user)
+    }
   },
   {
     title: 'Download scaffold',

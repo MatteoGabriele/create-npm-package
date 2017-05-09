@@ -22,5 +22,6 @@
     "ora": "^1.2.0",
     "webpack": "^2.5.0",
     "webpack-merge": "^4.1.0"
-  }
+  },
+  "dependencies": {}
 }
