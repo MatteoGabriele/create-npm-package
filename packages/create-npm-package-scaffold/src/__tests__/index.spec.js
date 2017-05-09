@@ -1,5 +1,5 @@
 describe('my node module', function () {
   it('should be an amazing module', function () {
-    expect(true).toBeTruethy()
+    expect(true).toBeTruthy()
   })
 })
