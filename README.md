@@ -21,7 +21,6 @@ $ npm install -g create-npm-package
 $ create-npm-package my-package
 ```
 
-
 ### Skip the npm name check
 
 The existance of the package name is checked automatically, but you can skip it!
@@ -42,6 +41,24 @@ $ create-npm-package my-package --skip-git
 
 ```bash
 $ create-npm-package my-package --yarn
+```
+
+## Git configuration
+
+To be able to grab your git global data and add them to the package.json automatically, you need to 
+
+```bash
+$ git config --global user.name 'your name'
+```
+
+```bash
+$ git config --global user.email 'your@email'
+```
+
+and if you want to add also the repository url just add 
+
+```bash
+$ git config --global user.url 'https://github.com/your_account_name'
 ```
 
 # Issues and features requests
