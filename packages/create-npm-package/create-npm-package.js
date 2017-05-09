@@ -73,8 +73,7 @@ const tasks = new Listr([
   {
     title: 'Download scaffold',
     task: ctx => extractPackage({
-      name: 'create-npm-package-scaffold',
-      tag: 'beta'
+      name: 'create-npm-package-scaffold'
     }).then(templatePath => ctx.templatePath = templatePath)
   },
   {
