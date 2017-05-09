@@ -9,7 +9,8 @@
   },
   "files": [
     "src",
-    "index.js"
+    "index.js",
+    "create-npm-package.js"
   ],
   "repository": "MatteoGabriele/create-npm-package",
   "bin": {
