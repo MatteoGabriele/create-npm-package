@@ -138,8 +138,4 @@ tasks.run()
       cd ${name} && ${cmdBuild}
     `)
   })
-  .catch((error) => {
-    console.error('[create-npm-package] I don\'t now man! something really bad happened! :D')
-    console.log('')
-    console.log(error)
-  })
+  .catch(() => {})
