@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/create-npm-package.svg)](https://badge.fury.io/js/create-npm-package) 
+[![npm](https://img.shields.io/npm/dm/create-npm-package.svg)](https://www.npmjs.com/package/create-npm-package)
 
 # create-npm-package
 
@@ -55,7 +56,7 @@ $ git config --global user.name 'your name'
 $ git config --global user.email 'your@email'
 ```
 
-and if you want to add also the repository url just add 
+and if you want to add also the repository url, just run 
 
 ```bash
 $ git config --global user.url 'https://github.com/your_account_name'
