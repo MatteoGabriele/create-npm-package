@@ -1,5 +1,6 @@
 [![npm version](https://badge.fury.io/js/create-npm-package.svg)](https://badge.fury.io/js/create-npm-package) 
 [![npm](https://img.shields.io/npm/dm/create-npm-package.svg)](https://www.npmjs.com/package/create-npm-package)
+[![Build Status](https://travis-ci.org/marcosvidolin/create-npm-package.svg?branch=master)](https://travis-ci.org/marcosvidolin/create-npm-package)
 
 # create-npm-package
 
